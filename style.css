@@ -1,16 +1,99 @@
+:root {
+    --primary-color: #00f2ff;
+    --accent-color: #7000ff;
+    --success-color: #00ff88;
+    --bg-dark: #020617;
+    --text-main: #f8fafc;
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e9f5f9;
-    color: #333;
-    margin: 40px;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background-glow {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(112,0,255,0.15) 0%, rgba(0,242,255,0.05) 50%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+    animation: aurora 20s infinite linear;
+}
+
+.container {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 4rem;
+    border-radius: 2rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 90%;
+    transition: var(--transition);
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--success-color);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    border: 1px solid var(--success-color);
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
 h1 {
-    color: #007bff;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.terminal-window {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 2px solid var(--accent-color);
+    font-size: 0.9rem;
+    min-height: 100px;
+}
+
+#dynamic-console {
+    color: var(--success-color);
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: 0.875rem;
+    opacity: 0.7;
     text-align: center;
 }
 
-p {
-    text-align: center;
+@keyframes aurora {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
