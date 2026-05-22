@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #4f46e5; /* Indigo Accent */
-    --bg-color: #0f172a;      /* Deep Slate Background */
-    --text-main: #f8fafc;     
-    --text-muted: #94a3b8;
+    --primary-color: #0078d4; /* Office 365 Style Blue */
+    --bg-color: #f0f9ff;      /* Calm Light Sky Blue */
+    --text-main: #0f172a;     /* Dark Slate for readability */
+    --text-muted: #475569;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
     --alert-accent: #f59e0b;  /* Amber for attention */
-    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --transition: all 0.3s ease;
 }
 
@@ -19,8 +19,8 @@
 body {
     font-family: "Inter", -apple-system, system-ui, sans-serif;
     background-color: var(--bg-color);
-    background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-                      radial-gradient(at 50% 0%, hsla(225,39%,30%,0.1) 0, transparent 50%);
+    background-image: radial-gradient(at 0% 0%, #e0f2fe 0%, transparent 50%), 
+                      radial-gradient(at 50% 0%, #f0f9ff 0%, transparent 50%);
     color: var(--text-main);
     line-height: 1.6;
     min-height: 100vh;
@@ -40,12 +40,12 @@ body {
     align-items: center;
     padding: 20px 0;
     margin-bottom: 30px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
     font-weight: 800;
-    color: #fff;
+    color: var(--text-main);
     letter-spacing: 1px;
     font-size: 1.1rem;
 }
@@ -97,7 +97,7 @@ h1 {
 }
 
 .status-dot {
-    color: #10b981;
+    color: var(--primary-color);
     margin-right: 6px;
 }
 
@@ -109,7 +109,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .alert-text-wrapper {
@@ -147,7 +147,7 @@ h1 {
 
 .action-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
 }
 
 .gateway-button {
@@ -155,7 +155,7 @@ h1 {
     color: white;
     border: none;
     padding: 14px 40px;
-    border-radius: 8px;
+    border-radius: 2px;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
@@ -164,12 +164,11 @@ h1 {
 
 .gateway-button:hover {
     transform: translateY(-2px);
-    background-color: #4338ca;
+    background-color: #005a9e;
 }
 
 #verification-gateway {
-    background-color: var(--bg-color);
-    background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.1) 0%, transparent 100%);
+    background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,15 +180,16 @@ h1 {
 .gateway-content {
     background: #ffffff;
     padding: 60px 40px;
-    border-radius: 16px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 440px;
     color: #1e293b;
+    border: 1px solid var(--border-color);
 }
 
 .security-shield {
-    font-size: 3rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
 }
 
