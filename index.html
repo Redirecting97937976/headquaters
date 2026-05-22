@@ -8,8 +8,8 @@
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Official Communication Portal">
-    <meta property="og:description" content="Secure verification gateway for official correspondence.">
+    <meta property="og:title" content="Secure Gateway | Official Portal">
+    <meta property="og:description" content="Secure access to official communications and encrypted transmissions.">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,36 +17,37 @@
     <!-- Identity Verification Gateway -->
     <div id="verification-gateway">
         <div class="gateway-content">
-            <h2 class="gateway-title">Identity Verification</h2>
-            <p class="gateway-text">Please confirm you are not a robot to access the secure portal.</p>
+            <div class="security-shield">🛡️</div>
+            <h2 class="gateway-title">Security Check</h2>
+            <p class="gateway-text">To maintain a secure environment, please verify your identity to proceed.</p>
             <button id="verify-btn" class="gateway-button">
                 <span class="btn-text">I am not a robot</span>
             </button>
         </div>
     </div>
 
-    <main class="container" style="opacity: 0; transform: translateY(20px);">
+    <main class="container" style="opacity: 0; transform: scale(0.98);">
         <nav class="top-nav">
-            <div class="logo">OFFICIAL PORTAL</div>
-            <div class="system-status"><span class="lock-icon">🔒</span> <span id="system-state" class="status-indicator">Secure Connection</span></div>
+            <div class="logo">PORTAL<span class="accent">SECURE</span></div>
+            <div class="system-status"><span id="system-state" class="status-indicator">● ENCRYPTED SESSION</span></div>
         </nav>
 
         <header class="portal-header">
-            <h1 id="main-heading">Official Communication Hub</h1>
-            <p id="sub-text">Establishing a secure session with the server...</p>
+            <h1 id="main-heading">Communication Management</h1>
+            <p id="sub-text" class="timestamp-text">Initializing synchronization...</p>
         </header>
 
         <section class="content-hub">
-            <div class="dashboard-card paper-stack">
-                <h3 class="section-title">Inbound Correspondence</h3>
+            <div class="dashboard-card">
+                <h3 class="section-title">Active Transmissions</h3>
                 <div id="dynamic-console"></div>
                 
                 <!-- Important Notification -->
                 <div id="message-alert" class="hidden">
                     <div class="alert-content">
                         <div class="alert-text-wrapper">
-                            <span class="alert-badge">ACTION REQUIRED</span> 
-                            <p class="alert-message"><strong>Official Notice:</strong> A secure transmission is awaiting your formal review.</p>
+                            <span class="alert-badge">PRIORITY</span> 
+                            <p class="alert-message">A secure communication is currently awaiting your formal acknowledgement.</p>
                         </div>
                         <button type="button" class="action-button">Acknowledge and View</button>
                     </div>

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         verifyBtn.addEventListener('click', () => {
             // Add a loading state to the button
             const btnText = verifyBtn.querySelector('.btn-text');
-            if (btnText) btnText.textContent = "Validating...";
+            if (btnText) btnText.textContent = "Authenticating...";
             verifyBtn.style.opacity = "0.7";
             verifyBtn.disabled = true;
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (mainContainer) {
                     mainContainer.style.opacity = '1';
-                    mainContainer.style.transform = 'translateY(0)';
+                    mainContainer.style.transform = 'scale(1)';
                 }
                 startPortal();
             }, 800);
