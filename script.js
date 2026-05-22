@@ -10,15 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 0. Verification Logic
     if (verifyBtn && gateway) {
         verifyBtn.addEventListener('click', () => {
-            gateway.style.opacity = '0';
-            setTimeout(() => gateway.style.display = 'none', 500);
+            // Add a loading state to the button
+            const btnText = verifyBtn.querySelector('.btn-text');
+            if (btnText) btnText.textContent = "Verifying...";
+            verifyBtn.style.opacity = "0.7";
+            verifyBtn.disabled = true;
 
-            if (mainContainer) {
-                mainContainer.style.opacity = '1';
-                mainContainer.style.transform = 'translateY(0)';
-            }
-            
-            startInterface();
+            // Simulate a secure check delay
+            setTimeout(() => {
+                gateway.style.opacity = '0';
+                setTimeout(() => gateway.style.display = 'none', 300);
+
+                if (mainContainer) {
+                    mainContainer.style.opacity = '1';
+                    mainContainer.style.transform = 'translateY(0)';
+                }
+                startInterface();
+            }, 800);
         });
     }
 
@@ -35,17 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (logIndex >= systemLogs.length) return;
 
             const log = document.createElement('div');
-            log.textContent = `STATUS: ${systemLogs[logIndex]}`;
-            log.style.marginBottom = '8px';
+            log.textContent = `● ${systemLogs[logIndex]}`;
+            log.style.marginBottom = '4px';
             consoleDiv.appendChild(log);
             logIndex++;
             
             if (logIndex === systemLogs.length) {
                 setTimeout(() => {
                     if(messageAlert) messageAlert.classList.remove('hidden');
-                }, 1000);
+                }, 600);
             } else {
-                setTimeout(updateConsole, 1000);
+                setTimeout(updateConsole, 600);
             }
         };
         setTimeout(updateConsole, 500);

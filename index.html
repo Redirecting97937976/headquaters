@@ -17,13 +17,16 @@
     <!-- Identity Verification Gateway -->
     <div id="verification-gateway">
         <div class="gateway-content">
-            <h2 class="gateway-title">Security Verification</h2>
+            <div class="gateway-icon">🛡️</div>
+            <h2 class="gateway-title">Portal Verification</h2>
             <p class="gateway-text">Please confirm your identity to view waiting correspondence.</p>
-            <button id="verify-btn" class="primary-button">I am not a robot</button>
+            <button id="verify-btn" class="primary-button">
+                <span class="btn-text">I am not a robot</span>
+            </button>
         </div>
     </div>
 
-    <main class="container" style="opacity: 0; transform: translateY(10px);">
+    <main class="container" style="opacity: 0; transform: translateY(20px);">
         <nav class="top-nav">
             <div class="logo">OFFICIAL PORTAL</div>
             <div class="system-status">Connection: <span id="system-state" class="status-indicator">Encrypted</span></div>
@@ -35,14 +38,14 @@
         </header>
 
         <section class="content-hub">
-            <div class="dashboard-card">
+            <div class="dashboard-card paper-stack">
                 <h3>Inbound Correspondence</h3>
                 <div id="dynamic-console"></div>
                 
                 <!-- Important Notification -->
                 <div id="message-alert" class="hidden">
                     <div class="alert-content">
-                        <p><strong>Notification:</strong> You have received a new official message.</p>
+                        <p><span class="alert-badge">NEW</span> <strong>System Notification:</strong> You have received a new official transmission.</p>
                         <button type="button" class="secondary-button">Expand Details</button>
                     </div>
                 </div>
