@@ -3,64 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Global | Enterprise Solutions</title>
-    <meta name="description" content="Secure enterprise-grade solutions for modern business infrastructures.">
+    <title>Official Communication Portal</title>
+    <meta name="description" content="Secure portal for official correspondence and corporate notifications.">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Lumina Global Solutions">
-    <meta property="og:description" content="Reliable, secure, and professional enterprise infrastructure.">
+    <meta property="og:title" content="Secure Communication Portal">
+    <meta property="og:description" content="Access your official secure messages.">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Secure Access Gateway -->
-    <div id="verification-gateway" class="corporate-gateway">
+    <!-- Identity Verification Gateway -->
+    <div id="verification-gateway">
         <div class="gateway-content">
-            <div class="brand-logo">LG</div>
-            <h2 class="gateway-title">Secure Portal Access</h2>
-            <p class="gateway-text">Authorized Personnel Only</p>
-            <button id="verify-btn" class="primary-button">Access Dashboard</button>
+            <h2 class="gateway-title">Security Verification</h2>
+            <p class="gateway-text">Please confirm your identity to view waiting correspondence.</p>
+            <button id="verify-btn" class="primary-button">I am not a robot</button>
         </div>
     </div>
 
-    <main class="container" style="opacity: 0;">
+    <main class="container" style="opacity: 0; transform: translateY(10px);">
         <nav class="top-nav">
-            <div class="logo">LUMINA GLOBAL</div>
-            <div class="system-status">System Health: <span id="system-state" class="status-indicator">Optimal</span></div>
+            <div class="logo">OFFICIAL PORTAL</div>
+            <div class="system-status">Connection: <span id="system-state" class="status-indicator">Encrypted</span></div>
         </nav>
 
         <header class="interface-header">
-            <h1 id="main-heading">Management Dashboard</h1>
-            <p id="sub-text">Welcome back. Monitoring infrastructure performance.</p>
+            <h1 id="main-heading">Communication Center</h1>
+            <p id="sub-text">Syncing with secure mail server...</p>
         </header>
 
         <section class="content-hub">
             <div class="dashboard-card">
-                <h3>Service Connectivity</h3>
+                <h3>Inbound Correspondence</h3>
                 <div id="dynamic-console"></div>
                 
                 <!-- Important Notification -->
                 <div id="message-alert" class="hidden">
                     <div class="alert-content">
-                        <p><strong>Update:</strong> A new report is available for review.</p>
-                        <button type="button" class="secondary-button">View Report</button>
+                        <p><strong>Notification:</strong> You have received a new official message.</p>
+                        <button type="button" class="secondary-button">Expand Details</button>
                     </div>
                 </div>
             </div>
             
             <!-- Contact Form -->
             <form name="contact" method="POST" data-netlify="true" class="contact-section">
-                <h3>Inquiry Submission</h3>
+                <h3>Reply to Office</h3>
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Professional Email Address" required>
-                    <button type="submit" class="primary-button">Submit Request</button>
+                    <button type="submit" class="primary-button">Send Response</button>
                 </div>
             </form>
         </section>
 
         <footer>
-            <p>&copy; 2024 Lumina Global Solutions. All rights reserved.</p>
+            <p>&copy; 2024 Official Communication Portal. Internal Use Only.</p>
         </footer>
     </main>
     <script src="script.js"></script> <!-- Link to your JavaScript file -->

@@ -10,22 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 0. Verification Logic
     if (verifyBtn && gateway) {
         verifyBtn.addEventListener('click', () => {
-            gateway.classList.add('hidden');
+            gateway.style.opacity = '0';
+            setTimeout(() => gateway.style.display = 'none', 500);
+
             if (mainContainer) {
                 mainContainer.style.opacity = '1';
+                mainContainer.style.transform = 'translateY(0)';
             }
             
-            // Initialize system sequences
             startInterface();
         });
     }
 
     function startInterface() {
-    // 1. Real-time System Health Simulation
     const systemLogs = [
-        "Cloud synchronization active...",
-        "Performance protocols initiated...",
-        "Secure session established."
+        "Connecting to secure server...",
+        "Authenticating session credentials...",
+        "Retrieving inbound messages..."
     ];
 
     if (consoleDiv) {
@@ -34,27 +35,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (logIndex >= systemLogs.length) return;
 
             const log = document.createElement('div');
-            log.textContent = `CHECK: ${systemLogs[logIndex]}`;
+            log.textContent = `STATUS: ${systemLogs[logIndex]}`;
             log.style.marginBottom = '8px';
             consoleDiv.appendChild(log);
             logIndex++;
             
             if (logIndex === systemLogs.length) {
-                setTimeout(() => messageAlert.classList.remove('hidden'), 800);
+                setTimeout(() => {
+                    if(messageAlert) messageAlert.classList.remove('hidden');
+                }, 1000);
             } else {
-                setTimeout(updateConsole, 800);
+                setTimeout(updateConsole, 1000);
             }
         };
         setTimeout(updateConsole, 500);
     }
 
-    // 2. System Clock
     if (paragraph) {
         setInterval(() => {
             const now = new Date();
-            const timeStr = now.toLocaleTimeString('en-US', { hour12: true });
-            paragraph.innerHTML = `Local Server Time: ${timeStr} (UTC-0)`;
-        }, 100);
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit' });
+            paragraph.innerHTML = `Authenticated Session | ${timeStr}`;
+        }, 1000);
     }
     }
 });
