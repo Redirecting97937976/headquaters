@@ -33,15 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function startPortal() {
     // Dynamically inject the domain into the heading for a professional touch
     const domain = window.location.hostname;
-    if (heading && domain && domain !== 'localhost' && domain !== '127.0.0.1') {
-        const brandName = domain.split('.')[0].toUpperCase();
-        heading.textContent = `${brandName} Secure Management Portal`;
+    if (heading) {
+        heading.textContent = `Secure Management Portal`;
     }
 
     const systemLogs = [
-        "Verifying authorized credentials...",
-        "Initializing secure session environment...",
-        "Searching for new communication transmissions..."
+        "Accessing secure document repository...",
+        "Verifying file encryption layers...",
+        "Synchronizing pending correspondence..."
     ];
 
     if (consoleDiv) {
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (logIndex >= systemLogs.length) return;
 
             const log = document.createElement('div');
-            log.textContent = `● ${systemLogs[logIndex]}`;
+            log.innerHTML = `<span class="status-dot">●</span> ${systemLogs[logIndex]}`;
             log.style.marginBottom = '4px';
             consoleDiv.appendChild(log);
             logIndex++;

@@ -114,6 +114,11 @@ h1 {
     padding: 10px 0 20px 0;
 }
 
+.status-dot {
+    color: #107c10; /* Success Green */
+    margin-right: 6px;
+}
+
 #message-alert {
     background: var(--alert-bg);
     border: 1px solid #fde7e9;
