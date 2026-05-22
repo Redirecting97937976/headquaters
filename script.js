@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         verifyBtn.addEventListener('click', () => {
             // Add a loading state to the button
             const btnText = verifyBtn.querySelector('.btn-text');
-            if (btnText) btnText.textContent = "Verifying...";
+            if (btnText) btnText.textContent = "Validating...";
             verifyBtn.style.opacity = "0.7";
             verifyBtn.disabled = true;
 
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startInterface() {
     const systemLogs = [
-        "Connecting to secure server...",
-        "Authenticating session credentials...",
-        "Retrieving inbound messages..."
+        "Establishing secure handshake...",
+        "Validating enterprise token...",
+        "Syncing remote correspondence..."
     ];
 
     if (consoleDiv) {
