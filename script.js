@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContainer = document.querySelector('.container');
     const messageAlert = document.getElementById('message-alert');
 
+    // Set dynamic copyright year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
     // 0. Verification Logic
     if (verifyBtn && gateway) {
         verifyBtn.addEventListener('click', () => {
