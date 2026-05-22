@@ -51,13 +51,6 @@ body {
     letter-spacing: 1px;
 }
 
-.brand-logo {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
 .lock-icon {
     margin-right: 6px;
     font-size: 0.9rem;
@@ -212,13 +205,6 @@ h1 {
     text-align: center;
     max-width: 400px;
     border: 1px solid var(--border-color);
-}
-
-.gateway-footer {
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
 }
 
 .support-link, .footer-link {
