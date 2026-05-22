@@ -20,7 +20,7 @@
             <div class="gateway-icon">🔐</div>
             <h2 class="gateway-title">Identity Validation</h2>
             <p class="gateway-text">Complete the security check to proceed to your secure workspace.</p>
-            <button id="verify-btn" class="primary-button">
+            <button id="verify-btn" class="gateway-button">
                 <span class="btn-text">Confirm Identity</span>
             </button>
         </div>
@@ -29,7 +29,7 @@
     <main class="container" style="opacity: 0; transform: translateY(20px);">
         <nav class="top-nav">
             <div class="logo">OFFICIAL PORTAL</div>
-            <div class="system-status">Connection: <span id="system-state" class="status-indicator">Encrypted</span></div>
+            <div class="system-status"><span class="lock-icon">🔒</span> <span id="system-state" class="status-indicator">Secure Connection</span></div>
         </nav>
 
         <header class="interface-header">
@@ -39,26 +39,20 @@
 
         <section class="content-hub">
             <div class="dashboard-card paper-stack">
-                <h3>Inbound Correspondence</h3>
+                <h3 class="section-title">Inbound Correspondence</h3>
                 <div id="dynamic-console"></div>
                 
                 <!-- Important Notification -->
                 <div id="message-alert" class="hidden">
                     <div class="alert-content">
-                        <p><span class="alert-badge">ACTION REQUIRED</span> <strong>Confidential Item:</strong> A secure transmission is awaiting your formal review.</p>
-                        <button type="button" class="secondary-button">Acknowledge and View</button>
+                        <div class="alert-text-wrapper">
+                            <span class="alert-badge">ACTION REQUIRED</span> 
+                            <p class="alert-message"><strong>Confidential Item:</strong> A secure transmission is awaiting your formal review.</p>
+                        </div>
+                        <button type="button" class="action-button">Acknowledge and View</button>
                     </div>
                 </div>
             </div>
-            
-            <!-- Contact Form -->
-            <form name="contact" method="POST" data-netlify="true" class="contact-section">
-                <h3>Reply to Office</h3>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Professional Email Address" required>
-                    <button type="submit" class="primary-button">Send Response</button>
-                </div>
-            </form>
         </section>
 
         <footer>
