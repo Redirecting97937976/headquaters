@@ -3,60 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Core | Neural Interface</title>
-    <meta name="description" content="A high-performance, modern web interface deployed via Netlify.">
+    <title>Lumina Global | Enterprise Solutions</title>
+    <meta name="description" content="Secure enterprise-grade solutions for modern business infrastructures.">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nexus Core Interface">
-    <meta property="og:description" content="Experience a sleek, modern web design built with best practices.">
+    <meta property="og:title" content="Lumina Global Solutions">
+    <meta property="og:description" content="Reliable, secure, and professional enterprise infrastructure.">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-glow"></div>
-
-    <!-- Verification Gateway -->
-    <div id="verification-gateway">
+    <!-- Secure Access Gateway -->
+    <div id="verification-gateway" class="corporate-gateway">
         <div class="gateway-content">
-            <div class="scan-line"></div>
-            <p class="gateway-text">NEURAL_LINK_REQUIRED</p>
-            <button id="verify-btn" class="glow-button">VERIFY HUMAN IDENTITY</button>
+            <div class="brand-logo">LG</div>
+            <h2 class="gateway-title">Secure Portal Access</h2>
+            <p class="gateway-text">Authorized Personnel Only</p>
+            <button id="verify-btn" class="primary-button">Access Dashboard</button>
         </div>
     </div>
 
-    <main class="container" style="opacity: 0; transform: translateY(20px);">
-        <div class="glass-shield"></div>
+    <main class="container" style="opacity: 0;">
+        <nav class="top-nav">
+            <div class="logo">LUMINA GLOBAL</div>
+            <div class="system-status">System Health: <span id="system-state" class="status-indicator">Optimal</span></div>
+        </nav>
+
         <header class="interface-header">
-            <div class="status-badge">System: <span id="system-state">Online</span></div>
-            <h1 id="main-heading" class="typewriter">Initializing...</h1>
+            <h1 id="main-heading">Management Dashboard</h1>
+            <p id="sub-text">Welcome back. Monitoring infrastructure performance.</p>
         </header>
+
         <section class="content-hub">
-            <div class="terminal-window">
-                <p id="sub-text">Establishing secure connection to Netlify Node...</p>
+            <div class="dashboard-card">
+                <h3>Service Connectivity</h3>
                 <div id="dynamic-console"></div>
                 
-                <!-- Secure Notification Overlay -->
+                <!-- Important Notification -->
                 <div id="message-alert" class="hidden">
-                    <div class="alert-border"></div>
                     <div class="alert-content">
-                        <span class="alert-icon">!</span>
-                        <p>PRIORITY: New secure transmission received from Uplink-01.</p>
-                        <button type="button" class="view-more-btn">EXPAND ACCESS</button>
+                        <p><strong>Update:</strong> A new report is available for review.</p>
+                        <button type="button" class="secondary-button">View Report</button>
                     </div>
                 </div>
             </div>
             
-            <!-- Communication Uplink Form -->
-            <form name="contact" method="POST" data-netlify="true" class="uplink-form">
+            <!-- Contact Form -->
+            <form name="contact" method="POST" data-netlify="true" class="contact-section">
+                <h3>Inquiry Submission</h3>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="ENTER_EMAIL_FOR_UPLINK" required>
-                    <button type="submit" class="glow-button">TRANSMIT</button>
+                    <input type="email" name="email" placeholder="Professional Email Address" required>
+                    <button type="submit" class="primary-button">Submit Request</button>
                 </div>
             </form>
         </section>
+
         <footer>
-            <p>&copy; 2024 NEXUS CORE. Protocol v4.0.2. Fully Optimized.</p>
+            <p>&copy; 2024 Lumina Global Solutions. All rights reserved.</p>
         </footer>
     </main>
     <script src="script.js"></script> <!-- Link to your JavaScript file -->

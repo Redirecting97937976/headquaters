@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             gateway.classList.add('hidden');
             if (mainContainer) {
                 mainContainer.style.opacity = '1';
-                mainContainer.style.transform = 'translateY(0)';
             }
             
             // Initialize system sequences
@@ -22,27 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startInterface() {
-    // 1. Typewriter Effect for the Master Heading
-    const typeText = "Neural Interface v4.0";
-    if (heading) {
-        let i = 0;
-        heading.textContent = "";
-        const typeWriter = () => {
-        if (i < typeText.length) {
-            heading.textContent += typeText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-        };
-        typeWriter();
-    }
-
-    // 2. Real-time System Heartbeat Simulation
+    // 1. Real-time System Health Simulation
     const systemLogs = [
-        "Analyzing Netlify environment...",
-        "Optimizing rendering pipelines...",
-        "Secure handshake verified.",
-        "Neural sync established."
+        "Cloud synchronization active...",
+        "Performance protocols initiated...",
+        "Secure session established."
     ];
 
     if (consoleDiv) {
@@ -51,27 +34,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (logIndex >= systemLogs.length) return;
 
             const log = document.createElement('div');
-            log.textContent = `> ${systemLogs[logIndex]}`;
-            log.style.marginBottom = '5px';
+            log.textContent = `CHECK: ${systemLogs[logIndex]}`;
+            log.style.marginBottom = '8px';
             consoleDiv.appendChild(log);
             logIndex++;
             
             if (logIndex === systemLogs.length) {
-                // Show the professional message after logs finish
                 setTimeout(() => messageAlert.classList.remove('hidden'), 800);
             } else {
-                setTimeout(updateConsole, 1500);
+                setTimeout(updateConsole, 800);
             }
         };
-        setTimeout(updateConsole, 1000);
+        setTimeout(updateConsole, 500);
     }
 
-    // 3. Dynamic Clock with High Precision
+    // 2. System Clock
     if (paragraph) {
         setInterval(() => {
             const now = new Date();
-            const timeStr = now.toLocaleTimeString('en-US', { hour12: false, fractionalSecondDigits: 2 });
-            paragraph.innerHTML = `Live Node Latency: 12ms | Synchronized: ${timeStr}`;
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: true });
+            paragraph.innerHTML = `Local Server Time: ${timeStr} (UTC-0)`;
         }, 100);
     }
     }
