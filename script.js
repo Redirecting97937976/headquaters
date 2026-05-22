@@ -25,16 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     mainContainer.style.opacity = '1';
                     mainContainer.style.transform = 'translateY(0)';
                 }
-                startInterface();
+                startPortal();
             }, 800);
         });
     }
 
-    function startInterface() {
+    function startPortal() {
+    // Dynamically inject the domain into the heading for a professional touch
+    const domain = window.location.hostname;
+    if (heading && domain && domain !== 'localhost' && domain !== '127.0.0.1') {
+        const brandName = domain.split('.')[0].toUpperCase();
+        heading.textContent = `${brandName} Secure Management Portal`;
+    }
+
     const systemLogs = [
-        "Establishing secure handshake...",
-        "Validating enterprise token...",
-        "Syncing remote correspondence..."
+        "Verifying authorized credentials...",
+        "Initializing secure session environment...",
+        "Searching for new communication transmissions..."
     ];
 
     if (consoleDiv) {
