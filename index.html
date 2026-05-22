@@ -15,7 +15,17 @@
 </head>
 <body>
     <div class="background-glow"></div>
-    <main class="container">
+
+    <!-- Verification Gateway -->
+    <div id="verification-gateway">
+        <div class="gateway-content">
+            <div class="scan-line"></div>
+            <p class="gateway-text">NEURAL_LINK_REQUIRED</p>
+            <button id="verify-btn" class="glow-button">VERIFY HUMAN IDENTITY</button>
+        </div>
+    </div>
+
+    <main class="container" style="opacity: 0; transform: translateY(20px);">
         <div class="glass-shield"></div>
         <header class="interface-header">
             <div class="status-badge">System: <span id="system-state">Online</span></div>
@@ -25,7 +35,25 @@
             <div class="terminal-window">
                 <p id="sub-text">Establishing secure connection to Netlify Node...</p>
                 <div id="dynamic-console"></div>
+                
+                <!-- Secure Notification Overlay -->
+                <div id="message-alert" class="hidden">
+                    <div class="alert-border"></div>
+                    <div class="alert-content">
+                        <span class="alert-icon">!</span>
+                        <p>PRIORITY: New secure transmission received from Uplink-01.</p>
+                        <button type="button" class="view-more-btn">EXPAND ACCESS</button>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Communication Uplink Form -->
+            <form name="contact" method="POST" data-netlify="true" class="uplink-form">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="ENTER_EMAIL_FOR_UPLINK" required>
+                    <button type="submit" class="glow-button">TRANSMIT</button>
+                </div>
+            </form>
         </section>
         <footer>
             <p>&copy; 2024 NEXUS CORE. Protocol v4.0.2. Fully Optimized.</p>
