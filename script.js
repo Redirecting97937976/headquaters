@@ -53,7 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (logIndex >= systemLogs.length) return;
 
             const log = document.createElement('div');
-            log.innerHTML = `<span class="status-dot">●</span> ${systemLogs[logIndex]}`;
+            // First two show green (success), the last one shows gray (pending)
+            const dotClass = logIndex < 2 ? 'active' : 'waiting';
+            log.innerHTML = `<span class="status-dot ${dotClass}">●</span> ${systemLogs[logIndex]}`;
             log.style.marginBottom = '4px';
             consoleDiv.appendChild(log);
             logIndex++;
